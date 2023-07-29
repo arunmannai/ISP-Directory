@@ -9,10 +9,10 @@ function App() {
   const [isplist, setIsplist] = useState(data);
 
   return (
-    <div>
+    <>
       <Header total={isplist.length} apihits={apihits} />
       <Main isplist={isplist} />
-    </div>
+    </>
   );
 }
 
