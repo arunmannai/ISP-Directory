@@ -2,7 +2,7 @@ import React from 'react';
 
 function Counter(props) {
   return (
-    <div>
+    <div className="counter">
       Total ISP: {props.total} | API Hits: {props.apihits}
     </div>
   );
