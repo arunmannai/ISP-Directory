@@ -1,11 +1,15 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
+import Header from './Header';
+import Main from './Main';
 
-export default function App() {
+function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <Header />
+      <Main />
     </div>
   );
 }
+
+export default App;
