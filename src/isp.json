@@ -1,0 +1,101 @@
+[
+    {
+        "name": "BSNL",
+        "lowest_price": 110,
+        "rating": 1,
+        "max_speed": "25mbps",
+        "description": "<b>Bharat Sanchar Nigam Limited (BSNL)</b> is a government owned telecommunications service provider headquartered in New Delhi, India.",
+        "contact_no": "1800-345-1500",
+        "email": "ebenquiry@bsnl.co.in",
+        "image": "https://www.bsnl.co.in/Logo-New.png",
+        "url": "https://www.bsnl.co.in" 
+    },
+    {
+        "name": "Airtel",
+        "lowest_price": 450,
+        "rating": 4,
+        "max_speed": "50mbps",
+        "description": "Our internet plans are now available at never befor prices. You can also opt for a voice top-up pack and enjoy unlimited local and STD calls from your <b>airtel> landline.",
+        "contact_no": "080-44444121",
+        "email": "121@in.airtel.com",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/18/Airtel_logo.svg",
+        "url": "https://www.airtel.in" 
+    },
+    {
+        "name": "Hathway",
+        "lowest_price": 600,
+        "rating": 1,
+        "max_speed": "25mbps",
+        "description": "<b>Hathway Cable & Datacom Ltd</b>, formerly BITV Cable Networks, is an Indian cable television service operator based in Mumbai.",
+        "contact_no": "0120-6836401",
+        "email": "catvsupport@hathway.net",
+        "image": "https://www.hathway.com/assets/img/common/logo.png",
+        "url": "https://www.hathway.com" 
+    },
+    {
+        "name": "BBNL/BNET",
+        "lowest_price": 850,
+        "rating": 2,
+        "max_speed": "100mbps",
+        "description": "<b>BharatNet</b>, also known as <b>Bharat Broadband Network Limited</b>, is a government-owned broadband infrastructure provider, set up by the Department of Telecommunications, a department under Ministry of Communications of the Government of India for the establishment, management, and operation of the National Optical Fibre Network to provide a minimum of 100 Mbit/s broadband connectivity to all 250,000-gram panchayats in the country, covering nearly 625,000 villages, by improving the middle layer of nation-wide broadband internet in India to achieve the goal of Digital India.",
+        "contact_no": "011-24668400",
+        "email": "contact.bbnl@nic.in",
+        "image": "https://m.economictimes.com/thumb/height-450,width-600,imgsize-148140,msid-88972326/titled-design-2022-01-18t152329-664.jpg",
+        "url": "https://bbnl.nic.in" 
+    },
+    {
+        "name": "ACT Broadband",
+        "lowest_price": 600,
+        "rating": 5,
+        "max_speed": "100mbps",
+        "description": "Atria Convergence Technologies Limited, branded as ACT, is an Indian telecommunications company headquartered in Bangalore, Karnataka. ACT offers fibre to the home services under the brand name \"ACT Fibernet\" and digital television services under the \"ACT Digital\" brand.",
+        "contact_no": "1800 1022 836",
+        "email": "helpdesk.blr@actcorp.in",
+        "image": "https://images.indianexpress.com/2020/12/ACT-Fibernet-.jpg",
+        "url": "https://www.actcorp.in" 
+    },
+    {
+        "name": "YOU Broadband",
+        "lowest_price": 700,
+        "rating": 3,
+        "max_speed": "25mbps",
+        "description": "YOU Broadband is a category 'A' ISP and India's first ISO accredited broadband service provider.",
+        "contact_no": "1800121222",
+        "email": "customercare@youbroadband.co.in",
+        "image": "https://youbroadband.in/img/logo-2017.png",
+        "url": "https://youbroadband.in/" 
+    },
+    {
+        "name": "Tikona Digital Network",
+        "lowest_price": 400,
+        "rating": 1,
+        "max_speed": "250mbps",
+        "description": "Tikona Infinet Limited, referred to simply as Tikona, is an India Internet service provider based in Mumbai. The company started its operations as TDN in 2008 to provide home WIBRO services.",
+        "contact_no": "1860 3000 3434",
+        "email": "customercare@tikona.in",
+        "image": "https://assets.tikona.in/tikona/tikonalogo/logo188x48.png",
+        "url": "http://www.tikona.in" 
+    },
+    {
+        "name": "Railtel",
+        "lowest_price": 1500,
+        "rating": 2,
+        "max_speed": "100mbps",
+        "description": "RailTel Corporation of India Ltd. is under the ownership of Indian Railways, Ministry of Railways, Government of India focusing on providing broadband and VPN services.",
+        "contact_no": "+91 11 22900600",
+        "email": "info@railtelindia.com",
+        "image": "https://www.railtelindia.com/templates/tpl_railtel_home/images/logo.png",
+        "url": "https://www.railtelindia.com" 
+    },
+    {
+        "name": "Reliance DSL",
+        "lowest_price": 900,
+        "rating": 1,
+        "max_speed": "2mbps",
+        "description": "Reliance Broadband is one of the leading private DSL connections in India.",
+        "contact_no": "1800 889 1055",
+        "email": "reliancedigital@ril.com",
+        "image": "https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg",
+        "url": "https://www.reliancedigital.in" 
+    }
+]
