@@ -4,7 +4,7 @@ import RightComponent from './RightComponent';
 
 function Main(props) {
   return (
-    <div>
+    <div className="mainbg">
       <LeftComponent isplist={props.isplist} />
       <RightComponent />
     </div>

@@ -2,16 +2,14 @@ import React from 'react';
 
 function LeftComponent(props) {
   return (
-    <ol>
+    <div className="leftcom">
       {props.isplist.map((item) => (
-        <li>
-          <div>
-            <span>{item.name}</span>
-            <span>{item.lowest_price}</span>
-          </div>
-        </li>
+        <div className="ispitem">
+          <span>{item.name}</span>
+          <span>&#x20B9; {item.lowest_price}</span>
+        </div>
       ))}
-    </ol>
+    </div>
   );
 }
 
