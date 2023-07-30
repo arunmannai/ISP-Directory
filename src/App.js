@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import Header from './Header';
 import Main from './Main';
-import data from './isp.json';
 
 function App() {
-  const [apihits, setApihits] = useState(53);
-  const [isplist, setIsplist] = useState(data);
+  const [apihits, setApihits] = useState(0);
+  const [isplist, setIsplist] = useState([]);
+
+  useEffect(() => {
+    const apiUrl =
+      'https://kazooxkp3g.execute-api.us-west-2.amazonaws.com/api/isp';
+    fetch(apiUrl)
+      .then((data) => data.json())
+      .then((data) => {
+        setIsplist(data.isplist);
+        setApihits(data.apihits);
+      });
+  }, []);
+
+  if (isplist.length === 0) return <>Loading...</>;
 
   return (
     <>
