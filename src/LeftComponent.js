@@ -4,7 +4,11 @@ function LeftComponent(props) {
   return (
     <div className="leftcom">
       {props.isplist.map((item) => (
-        <div className="ispitem" onClick={() => props.setSelectedItem(item)}>
+        <div
+          className="ispitem"
+          onClick={() => props.setSelectedItem(item)}
+          key={item.name}
+        >
           <span>{item.name}</span>
           <span>&#x20B9; {item.lowest_price}</span>
         </div>
