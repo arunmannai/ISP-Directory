@@ -4,6 +4,11 @@ function LeftComponent(props) {
   const [searchText, setSearchText] = useState('');
   const [orderby, setOrderby] = useState('name');
 
+  function gohome() {
+    setSearchText('');
+    setOrderby('name');
+  }
+
   let isplist = [...props.isplist];
   if (searchText) {
     if (+searchText <= 5)
@@ -30,6 +35,7 @@ function LeftComponent(props) {
 
   return (
     <div className="leftcom">
+      <span onClick={gohome}>Home</span>
       <input
         type="text"
         value={searchText}
