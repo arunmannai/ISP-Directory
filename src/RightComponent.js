@@ -14,18 +14,12 @@ function RightComponent(props) {
             <div className="p-1">{props.isp.contact_no}</div>
             <div className="p-1">{props.isp.email}</div>
             <div className="p-1">Min. Plan: &#8377;{props.isp.lowest_price} /-</div>
-
           </div>
         </div>
       </div>
-      
-      
-      <div>{props.isp.rating}</div>
-      
-      <div>{props.isp.description}</div>
-      
-      
-      <div>{props.isp.image}</div>
+         
+      <div>Rating: {props.isp.rating}</div>
+      <div className="description border border-dark px-1 pt-2 pb-3" dangerouslySetInnerHTML={{ __html: props.isp.description}}></div>
       <div>{props.isp.url}</div>
     </div>
   );

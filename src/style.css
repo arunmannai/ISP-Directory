@@ -70,3 +70,7 @@ img {
   border-radius: 10px;
   overflow: hidden;
 }
+.description{
+  border-radius: 10px;
+ background-color: #e8eaf6;
+}
