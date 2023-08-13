@@ -20,6 +20,8 @@ function RightComponent(props) {
          
       <div>Rating: {props.isp.rating}</div>
       <div className="description border border-dark px-1 pt-2 pb-3" dangerouslySetInnerHTML={{ __html: props.isp.description}}></div>
+      <div className="text-center mt-3">
+        <button type="button" class="btn btn-outline-success">Link</button></div>
       <div>{props.isp.url}</div>
     </div>
   );
