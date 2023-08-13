@@ -3,13 +3,28 @@ import React from 'react';
 function RightComponent(props) {
   return (
     <div className="col-sm-5">
-      <div>{props.isp.name}</div>
-      <div>{props.isp.lowest_price}</div>
+      <div className="row">
+        <div className="col-sm-4 p-3">
+          <img src={props.isp.image} alt={props.isp.name}></img>
+        </div>
+        <div className="col-sm-8 p-3">
+          <div className="border border-dark infobox">
+            <div className="p-1 text-center bg-secondary text-white">{props.isp.name}</div>
+            <div className="p-1">Max. Speed: {props.isp.max_speed}</div>
+            <div className="p-1">{props.isp.contact_no}</div>
+            <div className="p-1">{props.isp.email}</div>
+            <div className="p-1">Min. Plan: &#8377;{props.isp.lowest_price} /-</div>
+
+          </div>
+        </div>
+      </div>
+      
+      
       <div>{props.isp.rating}</div>
-      <div>{props.isp.max_speed}</div>
+      
       <div>{props.isp.description}</div>
-      <div>{props.isp.contact_no}</div>
-      <div>{props.isp.email}</div>
+      
+      
       <div>{props.isp.image}</div>
       <div>{props.isp.url}</div>
     </div>
