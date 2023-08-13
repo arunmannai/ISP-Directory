@@ -2,7 +2,7 @@ import React from 'react';
 
 function RightComponent(props) {
   return (
-    <div className="rightcom">
+    <div className="col-sm-5">
       <div>{props.isp.name}</div>
       <div>{props.isp.lowest_price}</div>
       <div>{props.isp.rating}</div>

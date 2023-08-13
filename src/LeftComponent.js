@@ -34,16 +34,19 @@ function LeftComponent(props) {
   }
 
   return (
-    <div className="leftcom">
-      <span onClick={gohome}>Home</span>
-      <input
+    <div className="col-sm-7 p-3">
+      <div className="left-header">
+      <h3 onClick={gohome} className="homebutton py-2">Home</h3>
+        <input
         type="text"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
-      ></input>
+        placeholder="Search (by ISP name, price, rating)"
+        className="form-control searchbox"></input>
+      </div>
       {isplist.map((item) => (
         <div
-          className="ispitem"
+          className="ispitem my-2 p-2"
           onClick={() => props.setSelectedItem(item)}
           key={item.name}
         >
@@ -58,8 +61,9 @@ function LeftComponent(props) {
         value="price"
         checked={orderby === 'price'}
         onChange={() => setOrderby('price')}
-      />
-      <label htmlFor="price">Price</label>
+        className="form-check-input mx-2"
+        />
+      <label htmlFor="price" className="form-check-label">Price</label>
       <input
         type="radio"
         name="orderby"
@@ -67,8 +71,9 @@ function LeftComponent(props) {
         value="rating"
         checked={orderby === 'rating'}
         onChange={() => setOrderby('rating')}
-      />
-      <label htmlFor="rating">Rating</label>
+        className="form-check-input mx-2"
+        />
+      <label htmlFor="rating" className="form-check-label">Rating</label>
     </div>
   );
 }

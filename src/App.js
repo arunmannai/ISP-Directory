@@ -18,7 +18,7 @@ function App() {
       });
   }, []);
 
-  if (isplist.length === 0) return <>Loading...</>;
+  if (isplist.length === 0) return <div className="m-3">Loading...</div>;
 
   return (
     <>
