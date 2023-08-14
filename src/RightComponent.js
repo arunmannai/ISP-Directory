@@ -18,14 +18,11 @@ function RightComponent(props) {
         </div>
       </div>
          
-      <div>Rating: {props.isp.rating}</div>
       <div className="description border border-dark px-1 pt-2 pb-3" dangerouslySetInnerHTML={{ __html: props.isp.description}}></div>
       <div className="text-center mt-3">
-      <a href={props.isp.url}><button type="button" class="btn btn-outline-success">Link</button></a>
-      <button type="button" class="btn btn-outline-success">Share</button>
-      <button type="button" class="btn btn-outline-success">Download</button>
+      <a href={props.isp.url} target="_blank" className="btn btn-outline-success">Link</a>
       </div>
-       </div>
+    </div>
   );
 }
 
