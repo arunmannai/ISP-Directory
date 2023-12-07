@@ -8,11 +8,12 @@ function App() {
   const [isplist, setIsplist] = useState([]);
 
   useEffect(() => {
-    const apiUrl =
-      'https://kazooxkp3g.execute-api.us-west-2.amazonaws.com/api/isp';
-    fetch(apiUrl)
-      .then((data) => data.json())
-      .then((data) => {
+    const proxyServerUrl = "https://aplab-e57c0-default-rtdb.firebaseio.com/servers/api-server.json";
+    fetch(proxyServerUrl)
+      .then(data => data.json())
+      .then(url => fetch(url+"/isp"))
+      .then(data => data.json())
+      .then(data => {
         setIsplist(data.isplist);
         setApihits(data.apihits);
       });
