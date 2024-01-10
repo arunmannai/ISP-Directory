@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 import Header from './Header';
 import Main from './Main';
+import axios from "axios";
 
 function App() {
   const [apihits, setApihits] = useState(0);
@@ -9,10 +10,10 @@ function App() {
 
   useEffect(() => {
     const proxyServerUrl = "https://aplab-e57c0-default-rtdb.firebaseio.com/servers/api-server.json";
-    fetch(proxyServerUrl)
-      .then(data => data.json())
-      .then(url => fetch(url+"/isp"))
-      .then(data => data.json())
+    axios(proxyServerUrl)
+      .then(response => response.data)
+      .then(url => axios(url+"/isp"))
+      .then(response => response.data)
       .then(data => {
         setIsplist(data.isplist);
         setApihits(data.apihits);
