@@ -9,13 +9,13 @@ function App() {
   const [isplist, setIsplist] = useState([]);
 
   useEffect(() => {
-    const hasuraServerUrl = "https://hot-mackerel-16.hasura.app/api/rest";
-    axios(hasuraServerUrl+"/isp")
+    const url = "https://hot-mackerel-16.hasura.app/api/rest";
+    axios(url+"/isp")
       .then(response => response.data)
       .then(data => {
         setIsplist(data.isplist);
       });
-    axios(hasuraServerUrl+"/apihits")
+    axios(url+"/counter?name=apihits")
       .then(response => response.data.update_counters.returning[0].value)
       .then(value => {
         setApihits(value);
