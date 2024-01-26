@@ -9,16 +9,18 @@ function App() {
   const [isplist, setIsplist] = useState([]);
 
   useEffect(() => {
-    const proxyServerUrl = "https://aplab-e57c0-default-rtdb.firebaseio.com/servers/api-server.json";
-    axios(proxyServerUrl)
-      .then(response => response.data)
-      .then(url => axios(url+"/isp"))
+    const hasuraServerUrl = "https://hot-mackerel-16.hasura.app/api/rest";
+    axios(hasuraServerUrl+"/isp")
       .then(response => response.data)
       .then(data => {
         setIsplist(data.isplist);
-        setApihits(data.apihits);
       });
-  }, []);
+    axios(hasuraServerUrl+"/apihits")
+      .then(response => response.data.update_counters.returning[0].value)
+      .then(value => {
+        setApihits(value);
+      });
+    }, []);
 
   if (isplist.length === 0) return <div className="m-3">Loading...</div>;
 
