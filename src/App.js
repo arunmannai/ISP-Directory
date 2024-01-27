@@ -9,7 +9,7 @@ function App() {
   const [isplist, setIsplist] = useState([]);
 
   useEffect(() => {
-    const url = "https://hot-mackerel-16.hasura.app/api/rest";
+    const url = process.env.REACT_APP_SERVER_URL;
     axios(url+"/isp")
       .then(response => response.data)
       .then(data => {
