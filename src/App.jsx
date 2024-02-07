@@ -9,7 +9,7 @@ function App() {
   const [isplist, setIsplist] = useState([]);
 
   useEffect(() => {
-    const url = process.env.REACT_APP_SERVER_URL;
+    const url = import.meta.env.VITE_SERVER_URL;
     axios(url+"/isp")
       .then(response => response.data)
       .then(data => {
