@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LeftComponent from './LeftComponent';
 import RightComponent from './RightComponent';
 

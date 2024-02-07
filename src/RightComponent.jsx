@@ -1,5 +1,3 @@
-import React from 'react';
-
 function RightComponent(props) {
   return (
     <div className="col-sm-5">
@@ -20,7 +18,7 @@ function RightComponent(props) {
          
       <div className="description border border-dark px-1 pt-2 pb-3" dangerouslySetInnerHTML={{ __html: props.isp.description}}></div>
       <div className="text-center mt-3">
-      <a href={props.isp.url} target="_blank" className="btn btn-outline-success">Link</a>
+      <a href={props.isp.url} target="_blank" rel="noreferrer" className="btn btn-outline-success">Link</a>
       </div>
     </div>
   );
