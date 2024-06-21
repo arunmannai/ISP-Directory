@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import LeftComponent from './LeftComponent';
 import RightComponent from './RightComponent';
+import { Isp } from './types';
 
-function Main(props) {
-  const [selectedItem, setSelectedItem] = useState(props.isplist[0]);
+function Main(props:{isplist:Isp[]}) {
+  const [selectedItem, setSelectedItem] = useState<Isp>(props.isplist[0]);
   return (
     <div className="container-fluid">
     <div className="row">

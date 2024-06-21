@@ -1,15 +1,16 @@
-import { useState } from 'react';
+import { Dispatch, useState } from 'react';
+import { Isp } from './types';
 
-function LeftComponent(props) {
-  const [searchText, setSearchText] = useState('');
-  const [orderby, setOrderby] = useState('name');
+function LeftComponent(props:{isplist:Isp[], setSelectedItem:Dispatch<React.SetStateAction<Isp>>}) {
+  const [searchText, setSearchText] = useState<string>('');
+  const [orderby, setOrderby] = useState<string>('name');
 
   function gohome() {
     setSearchText('');
     setOrderby('name');
   }
 
-  let isplist = [...props.isplist];
+  let isplist:Isp[] = [...props.isplist];
   if (searchText) {
     if (+searchText <= 5)
       isplist = isplist.filter((item) => item.rating >= +searchText);

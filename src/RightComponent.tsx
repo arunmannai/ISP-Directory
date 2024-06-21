@@ -1,4 +1,6 @@
-function RightComponent(props) {
+import { Isp } from "./types";
+
+function RightComponent(props:{isp:Isp}) {
   return (
     <div className="col-sm-5">
       <div className="row">

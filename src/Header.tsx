@@ -1,6 +1,6 @@
 import Counter from './Counter';
 
-function Header(props) {
+function Header(props:{apihits:number,total:number}) {
   return (
     <div className="headercompo">
       <h1 className="heading">ISP Directory</h1>

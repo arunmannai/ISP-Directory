@@ -2,22 +2,23 @@ import { useState, useEffect } from 'react';
 import './style.css';
 import Header from './Header';
 import Main from './Main';
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
+import { ApiHitsResponse, Isp, IspResponse } from './types';
 
 function App() {
-  const [apihits, setApihits] = useState(0);
-  const [isplist, setIsplist] = useState([]);
+  const [apihits, setApihits] = useState<number>(0);
+  const [isplist, setIsplist] = useState<Isp[]>([]);
 
   useEffect(() => {
-    const url = import.meta.env.VITE_SERVER_URL;
+    const url = "https://hot-mackerel-16.hasura.app/api/rest";
     axios(url+"/isp")
-      .then(response => response.data)
-      .then(data => {
+      .then((response:AxiosResponse<IspResponse>) => response.data)
+      .then((data:IspResponse) => {
         setIsplist(data.isplist);
       });
     axios(url+"/counter?name=apihits")
-      .then(response => response.data.update_counters.returning[0].value)
-      .then(value => {
+      .then((response:AxiosResponse<ApiHitsResponse>) => response.data.update_counters.returning[0].value)
+      .then((value:number) => {
         setApihits(value);
       });
     }, []);
